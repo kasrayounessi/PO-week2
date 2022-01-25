@@ -1,0 +1,25 @@
+def wordEncryptor(word):
+    word_arr = list(word)
+    word_arr.reverse()
+
+    for i in range(len(word_arr)):
+        if word_arr[i] == 'a':
+            word_arr[i] = 0
+        elif word_arr[i] == 'e':
+            word_arr[i] = 1
+        elif word_arr[i] == 'i' or word_arr[i] == 'o':
+            word_arr[i] = 2
+        elif word_arr[i] == 'u':
+            word_arr[i] = 3
+
+    final_word = ''
+    for x in word_arr:
+        final_word += str(x)
+    final_word = final_word + 'aca'
+    return final_word
+    
+
+print(wordEncryptor("banana"))
+print(wordEncryptor("karaca"))
+print(wordEncryptor("burak"))
+print(wordEncryptor("alpaca"))
